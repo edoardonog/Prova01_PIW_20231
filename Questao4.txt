@@ -1,0 +1,9 @@
+Questão 4:
+O Props Drilling (vazamento de props) ocorre quando passamos uma props para muitos componentes sequencialmente de maneira munual um por um, como um pai, que passa para o filho, que passa para o neto, bisneto e assim sucessivamente.
+Uma das maneiras de evita-lo é utilizando o Contexto, uma forma de passar dados entre componentes de maneira global sem a necessidade de passar props manualmente em cada nível das arvores.
+
+Exemplo do Props Drilling:
+Digamos que eu esteja construindo meu portfolio online e preciso passar os estilos para as outras páginas, mas apenas a página de contato tem o mesmo estilo que a inicial. Para tornar mais claro, vamos dizer que o background que pretendo passar é preto.
+[Estilo Página Inicial {bkg:"Black"}] -> [Página de Projetos] -> [Página de Premiações] -> [Página de Contato {bkg:"Black"}]
+
+até conseguir passar a cor do background para a página de contato, eu terei q passar por todas as outras páginas, mas se eu usasse o contexto, precisaria apenas criar um arquivo "ContextoBackground.JSX"e importa-lo nas páginas q eu desejasse
